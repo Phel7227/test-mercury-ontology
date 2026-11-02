@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "@base": "https://mercuryindustry.com.au/ontology/test#",
+    "@vocab": "https://mercuryindustry.com.au/ontology/test#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "domain": "rdfs:domain",
+    "range": "rdfs:range"
+  },
+  "@id": "https://mercuryindustry.com.au/ontology/test",
+  "@type": "owl:Ontology",
+  "label": "Mercury Industry test ontology (simulated)",
+  "comment": "TEST DATA ONLY. Simulated domain model for a small apartment project fitted with aluminium alloy windows. Not a real client, site, or price list.",
+  "@graph": [
+    {
+      "@id": "Project",
+      "@type": "owl:Class",
+      "label": "Project",
+      "comment": "A fabrication and installation engagement for one client site."
+    },
+    {
+      "@id": "Building",
+      "@type": "owl:Class",
+      "label": "Building",
+      "comment": "A physical structure on the project site that contains dwellings."
+    },
+    {
+      "@id": "Dwelling",
+      "@type": "owl:Class",
+      "label": "Dwelling",
+      "comment": "An apartment or unit within a building."
+    },
+    {
+      "@id": "Room",
+      "@type": "owl:Class",
+      "label": "Room",
+      "comment": "A habitable or service space inside a dwelling that may contain openings."
+    },
+    {
+      "@id": "Opening",
+      "@type": "owl:Class",
+      "label": "Opening",
+      "comment": "A window or door aperture in a room that Mercury fabricates and installs."
+    },
+    {
+      "@id": "WindowUnit",
+      "@type": "owl:Class",
+      "rdfs:subClassOf": { "@id": "Opening" },
+      "label": "Window unit",
+      "comment": "A manufactured aluminium window assembly."
+    },
+    {
+      "@id": "WindowType",
+      "@type": "owl:Class",
+      "label": "Window type",
+      "comment": "A standard design (operation, frame system, glazing) that window units are built to."
+    },
+    {
+      "@id": "FrameSystem",
+      "@type": "owl:Class",
+      "label": "Frame system",
+      "comment": "An aluminium extrusion profile system used to build frames and sashes."
+    },
+    {
+      "@id": "AluminiumAlloy",
+      "@type": "owl:Class",
+      "label": "Aluminium alloy",
+      "comment": "The alloy and temper used for extrusions. Test values only."
+    },
+    {
+      "@id": "Glazing",
+      "@type": "owl:Class",
+      "label": "Glazing",
+      "comment": "Glass infill specification for a window unit."
+    },
+    {
+      "@id": "FabricationJob",
+      "@type": "owl:Class",
+      "label": "Fabrication job",
+      "comment": "Workshop build of one or more window units for a project."
+    },
+    {
+      "@id": "InstallationTask",
+      "@type": "owl:Class",
+      "label": "Installation task",
+      "comment": "On-site fitting of a window unit into a room opening."
+    },
+    {
+      "@id": "Client",
+      "@type": "owl:Class",
+      "label": "Client",
+      "comment": "The party commissioning the project. Use fictional names in test data."
+    },
+    {
+      "@id": "hasDwelling",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "Building" },
+      "range": { "@id": "Dwelling" },
+      "label": "has dwelling"
+    },
+    {
+      "@id": "hasRoom",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "Dwelling" },
+      "range": { "@id": "Room" },
+      "label": "has room"
+    },
+    {
+      "@id": "hasOpening",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "Room" },
+      "range": { "@id": "Opening" },
+      "label": "has opening"
+    },
+    {
+      "@id": "ofWindowType",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "WindowUnit" },
+      "range": { "@id": "WindowType" },
+      "label": "of window type"
+    },
+    {
+      "@id": "usesFrameSystem",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "WindowType" },
+      "range": { "@id": "FrameSystem" },
+      "label": "uses frame system"
+    },
+    {
+      "@id": "usesAlloy",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "FrameSystem" },
+      "range": { "@id": "AluminiumAlloy" },
+      "label": "uses alloy"
+    },
+    {
+      "@id": "hasGlazing",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "WindowUnit" },
+      "range": { "@id": "Glazing" },
+      "label": "has glazing"
+    },
+    {
+      "@id": "partOfFabricationJob",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "WindowUnit" },
+      "range": { "@id": "FabricationJob" },
+      "label": "part of fabrication job"
+    },
+    {
+      "@id": "installsInto",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "InstallationTask" },
+      "range": { "@id": "Opening" },
+      "label": "installs into"
+    },
+    {
+      "@id": "forProject",
+      "@type": "owl:ObjectProperty",
+      "domain": { "@id": "Project" },
+      "range": { "@id": "Client" },
+      "label": "for client"
+    },
+    {
+      "@id": "widthMm",
+      "@type": "owl:DatatypeProperty",
+      "domain": { "@id": "WindowUnit" },
+      "range": "xsd:integer",
+      "label": "width (mm)"
+    },
+    {
+      "@id": "heightMm",
+      "@type": "owl:DatatypeProperty",
+      "domain": { "@id": "WindowUnit" },
+      "range": "xsd:integer",
+      "label": "height (mm)"
+    },
+    {
+      "@id": "serialNumber",
+      "@type": "owl:DatatypeProperty",
+      "domain": { "@id": "WindowUnit" },
+      "range": "xsd:string",
+      "label": "serial number"
+    }
+  ]
+}

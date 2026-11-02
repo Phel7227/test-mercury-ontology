@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "id": "TEST-APT-2026-02",
+      "name": "TEST: Simulated apartment project 2 (test data, not a real client)",
+      "client": "CLIENT-TEST-02",
+      "status": "synced",
+      "buildings": [
+        {
+          "id": "BLD-TEST-02",
+          "label": "Test building 2 (test data)",
+          "dwellings": [
+            {
+              "id": "Apt-201",
+              "label": "Unit 1 (Ground)",
+              "rooms": [
+                {
+                  "id": "Apt-201-Living",
+                  "label": "Living",
+                  "windows": [
+                    {
+                      "id": "MW-201",
+                      "label": "Unit 1 Living window, sliding",
+                      "windowType": "WT-SLIDE-2P",
+                      "glazing": "GL-DGU-6-12-6",
+                      "widthMm": 2400,
+                      "heightMm": 1500
+                    },
+                    {
+                      "id": "MW-202",
+                      "label": "Unit 1 Living window, fixed",
+                      "windowType": "WT-FIXED",
+                      "glazing": "GL-DGU-6-12-6",
+                      "widthMm": 900,
+                      "heightMm": 1200
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

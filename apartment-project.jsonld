@@ -1,0 +1,689 @@
+{
+  "@context": {
+    "@base": "https://mercuryindustry.com.au/data/test/",
+    "@vocab": "https://mercuryindustry.com.au/ontology/test#",
+    "label": "rdfs:label",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@id": "https://mercuryindustry.com.au/data/test/project/TEST-APT-2026-01",
+  "@type": "Project",
+  "label": "TEST: Simulated small apartment project (test data, not a real client)",
+  "forProject": {
+    "@id": "CLIENT-TEST-01"
+  },
+  "@graph": [
+    {
+      "@id": "CLIENT-TEST-01",
+      "@type": "Client",
+      "label": "Fictional Client Pty Ltd (test)"
+    },
+    {
+      "@id": "BLD-TEST-01",
+      "@type": "Building",
+      "label": "Test apartment building, 4 dwellings",
+      "hasDwelling": [
+        {
+          "@id": "Apt-01"
+        },
+        {
+          "@id": "Apt-02"
+        },
+        {
+          "@id": "Apt-03"
+        },
+        {
+          "@id": "Apt-04"
+        }
+      ]
+    },
+    {
+      "@id": "FJ-APT-2026-01",
+      "@type": "FabricationJob",
+      "label": "Workshop build: 20 aluminium window units"
+    },
+    {
+      "@id": "WT-SLIDE-2P",
+      "@type": "WindowType",
+      "label": "2-panel sliding",
+      "usesFrameSystem": {
+        "@id": "FS-SLIM-60"
+      }
+    },
+    {
+      "@id": "WT-CASEMENT-1P",
+      "@type": "WindowType",
+      "label": "1-panel side-hung casement",
+      "usesFrameSystem": {
+        "@id": "FS-SLIM-60"
+      }
+    },
+    {
+      "@id": "WT-AWNING-OBS",
+      "@type": "WindowType",
+      "label": "Awning, obscure glass",
+      "usesFrameSystem": {
+        "@id": "FS-SLIM-60"
+      }
+    },
+    {
+      "@id": "WT-FIXED",
+      "@type": "WindowType",
+      "label": "Fixed light",
+      "usesFrameSystem": {
+        "@id": "FS-SLIM-60"
+      }
+    },
+    {
+      "@id": "FS-SLIM-60",
+      "@type": "FrameSystem",
+      "label": "60 mm slim-sightline frame (test)",
+      "usesAlloy": {
+        "@id": "AL-6063-T6"
+      }
+    },
+    {
+      "@id": "AL-6063-T6",
+      "@type": "AluminiumAlloy",
+      "label": "6063-T6 (test value)"
+    },
+    {
+      "@id": "GL-DGU-6-12-6",
+      "@type": "Glazing",
+      "label": "6-12-6 double glazed unit (test)"
+    },
+    {
+      "@id": "GL-OBS-4-12-4",
+      "@type": "Glazing",
+      "label": "4-12-4 obscure double glazed unit (test)"
+    },
+    {
+      "@id": "Apt-01",
+      "@type": "Dwelling",
+      "label": "Unit 1 (Ground)",
+      "hasRoom": [
+        {
+          "@id": "Apt-01-Living"
+        },
+        {
+          "@id": "Apt-01-Bedroom1"
+        },
+        {
+          "@id": "Apt-01-Bedroom2"
+        },
+        {
+          "@id": "Apt-01-Bathroom"
+        },
+        {
+          "@id": "Apt-01-Kitchen"
+        }
+      ]
+    },
+    {
+      "@id": "Apt-02",
+      "@type": "Dwelling",
+      "label": "Unit 2 (Level 1)",
+      "hasRoom": [
+        {
+          "@id": "Apt-02-Living"
+        },
+        {
+          "@id": "Apt-02-Bedroom1"
+        },
+        {
+          "@id": "Apt-02-Bedroom2"
+        },
+        {
+          "@id": "Apt-02-Bathroom"
+        },
+        {
+          "@id": "Apt-02-Kitchen"
+        }
+      ]
+    },
+    {
+      "@id": "Apt-03",
+      "@type": "Dwelling",
+      "label": "Unit 3 (Level 2)",
+      "hasRoom": [
+        {
+          "@id": "Apt-03-Living"
+        },
+        {
+          "@id": "Apt-03-Bedroom1"
+        },
+        {
+          "@id": "Apt-03-Bedroom2"
+        },
+        {
+          "@id": "Apt-03-Bathroom"
+        },
+        {
+          "@id": "Apt-03-Kitchen"
+        }
+      ]
+    },
+    {
+      "@id": "Apt-04",
+      "@type": "Dwelling",
+      "label": "Unit 4 (Level 3)",
+      "hasRoom": [
+        {
+          "@id": "Apt-04-Living"
+        },
+        {
+          "@id": "Apt-04-Bedroom1"
+        },
+        {
+          "@id": "Apt-04-Bedroom2"
+        },
+        {
+          "@id": "Apt-04-Bathroom"
+        },
+        {
+          "@id": "Apt-04-Kitchen"
+        }
+      ]
+    },
+    {
+      "@id": "Apt-01-Living",
+      "@type": "Room",
+      "label": "Living",
+      "hasOpening": {
+        "@id": "MW-001"
+      }
+    },
+    {
+      "@id": "Apt-01-Bedroom1",
+      "@type": "Room",
+      "label": "Bedroom 1",
+      "hasOpening": {
+        "@id": "MW-002"
+      }
+    },
+    {
+      "@id": "Apt-01-Bedroom2",
+      "@type": "Room",
+      "label": "Bedroom 2",
+      "hasOpening": {
+        "@id": "MW-003"
+      }
+    },
+    {
+      "@id": "Apt-01-Bathroom",
+      "@type": "Room",
+      "label": "Bathroom",
+      "hasOpening": {
+        "@id": "MW-004"
+      }
+    },
+    {
+      "@id": "Apt-01-Kitchen",
+      "@type": "Room",
+      "label": "Kitchen",
+      "hasOpening": {
+        "@id": "MW-005"
+      }
+    },
+    {
+      "@id": "Apt-02-Living",
+      "@type": "Room",
+      "label": "Living",
+      "hasOpening": {
+        "@id": "MW-006"
+      }
+    },
+    {
+      "@id": "Apt-02-Bedroom1",
+      "@type": "Room",
+      "label": "Bedroom 1",
+      "hasOpening": {
+        "@id": "MW-007"
+      }
+    },
+    {
+      "@id": "Apt-02-Bedroom2",
+      "@type": "Room",
+      "label": "Bedroom 2",
+      "hasOpening": {
+        "@id": "MW-008"
+      }
+    },
+    {
+      "@id": "Apt-02-Bathroom",
+      "@type": "Room",
+      "label": "Bathroom",
+      "hasOpening": {
+        "@id": "MW-009"
+      }
+    },
+    {
+      "@id": "Apt-02-Kitchen",
+      "@type": "Room",
+      "label": "Kitchen",
+      "hasOpening": {
+        "@id": "MW-010"
+      }
+    },
+    {
+      "@id": "Apt-03-Living",
+      "@type": "Room",
+      "label": "Living",
+      "hasOpening": {
+        "@id": "MW-011"
+      }
+    },
+    {
+      "@id": "Apt-03-Bedroom1",
+      "@type": "Room",
+      "label": "Bedroom 1",
+      "hasOpening": {
+        "@id": "MW-012"
+      }
+    },
+    {
+      "@id": "Apt-03-Bedroom2",
+      "@type": "Room",
+      "label": "Bedroom 2",
+      "hasOpening": {
+        "@id": "MW-013"
+      }
+    },
+    {
+      "@id": "Apt-03-Bathroom",
+      "@type": "Room",
+      "label": "Bathroom",
+      "hasOpening": {
+        "@id": "MW-014"
+      }
+    },
+    {
+      "@id": "Apt-03-Kitchen",
+      "@type": "Room",
+      "label": "Kitchen",
+      "hasOpening": {
+        "@id": "MW-015"
+      }
+    },
+    {
+      "@id": "Apt-04-Living",
+      "@type": "Room",
+      "label": "Living",
+      "hasOpening": {
+        "@id": "MW-016"
+      }
+    },
+    {
+      "@id": "Apt-04-Bedroom1",
+      "@type": "Room",
+      "label": "Bedroom 1",
+      "hasOpening": {
+        "@id": "MW-017"
+      }
+    },
+    {
+      "@id": "Apt-04-Bedroom2",
+      "@type": "Room",
+      "label": "Bedroom 2",
+      "hasOpening": {
+        "@id": "MW-018"
+      }
+    },
+    {
+      "@id": "Apt-04-Bathroom",
+      "@type": "Room",
+      "label": "Bathroom",
+      "hasOpening": {
+        "@id": "MW-019"
+      }
+    },
+    {
+      "@id": "Apt-04-Kitchen",
+      "@type": "Room",
+      "label": "Kitchen",
+      "hasOpening": {
+        "@id": "MW-020"
+      }
+    },
+    {
+      "@id": "MW-001",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-001",
+      "label": "Unit 1 Living window",
+      "ofWindowType": {
+        "@id": "WT-SLIDE-2P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 2400,
+      "heightMm": 1500,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-002",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-002",
+      "label": "Unit 1 Bedroom 1 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-003",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-003",
+      "label": "Unit 1 Bedroom 2 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-004",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-004",
+      "label": "Unit 1 Bathroom window",
+      "ofWindowType": {
+        "@id": "WT-AWNING-OBS"
+      },
+      "hasGlazing": {
+        "@id": "GL-OBS-4-12-4"
+      },
+      "widthMm": 600,
+      "heightMm": 600,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-005",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-005",
+      "label": "Unit 1 Kitchen window",
+      "ofWindowType": {
+        "@id": "WT-FIXED"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 900,
+      "heightMm": 1200,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-006",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-006",
+      "label": "Unit 2 Living window",
+      "ofWindowType": {
+        "@id": "WT-SLIDE-2P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 2400,
+      "heightMm": 1500,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-007",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-007",
+      "label": "Unit 2 Bedroom 1 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-008",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-008",
+      "label": "Unit 2 Bedroom 2 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-009",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-009",
+      "label": "Unit 2 Bathroom window",
+      "ofWindowType": {
+        "@id": "WT-AWNING-OBS"
+      },
+      "hasGlazing": {
+        "@id": "GL-OBS-4-12-4"
+      },
+      "widthMm": 600,
+      "heightMm": 600,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-010",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-010",
+      "label": "Unit 2 Kitchen window",
+      "ofWindowType": {
+        "@id": "WT-FIXED"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 900,
+      "heightMm": 1200,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-011",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-011",
+      "label": "Unit 3 Living window",
+      "ofWindowType": {
+        "@id": "WT-SLIDE-2P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 2400,
+      "heightMm": 1500,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-012",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-012",
+      "label": "Unit 3 Bedroom 1 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-013",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-013",
+      "label": "Unit 3 Bedroom 2 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-014",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-014",
+      "label": "Unit 3 Bathroom window",
+      "ofWindowType": {
+        "@id": "WT-AWNING-OBS"
+      },
+      "hasGlazing": {
+        "@id": "GL-OBS-4-12-4"
+      },
+      "widthMm": 600,
+      "heightMm": 600,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-015",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-015",
+      "label": "Unit 3 Kitchen window",
+      "ofWindowType": {
+        "@id": "WT-FIXED"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 900,
+      "heightMm": 1200,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-016",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-016",
+      "label": "Unit 4 Living window",
+      "ofWindowType": {
+        "@id": "WT-SLIDE-2P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 2400,
+      "heightMm": 1500,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-017",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-017",
+      "label": "Unit 4 Bedroom 1 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-018",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-018",
+      "label": "Unit 4 Bedroom 2 window",
+      "ofWindowType": {
+        "@id": "WT-CASEMENT-1P"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 1200,
+      "heightMm": 1350,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-019",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-019",
+      "label": "Unit 4 Bathroom window",
+      "ofWindowType": {
+        "@id": "WT-AWNING-OBS"
+      },
+      "hasGlazing": {
+        "@id": "GL-OBS-4-12-4"
+      },
+      "widthMm": 600,
+      "heightMm": 600,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    },
+    {
+      "@id": "MW-020",
+      "@type": "WindowUnit",
+      "serialNumber": "MW-020",
+      "label": "Unit 4 Kitchen window",
+      "ofWindowType": {
+        "@id": "WT-FIXED"
+      },
+      "hasGlazing": {
+        "@id": "GL-DGU-6-12-6"
+      },
+      "widthMm": 900,
+      "heightMm": 1200,
+      "partOfFabricationJob": {
+        "@id": "FJ-APT-2026-01"
+      }
+    }
+  ]
+}
